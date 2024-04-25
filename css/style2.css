@@ -1,0 +1,73 @@
+@import url("../css/initialize.css");
+.topline {
+  width: 300px;
+}
+
+.arrow {
+  height: 40px;
+  width: auto;
+  position: absolute;
+  top: 2px;
+  left: 250px;
+}
+.arrow:hover .arrow {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 1.25s ease-in;
+  transition: -webkit-transform 1.25s ease-in;
+  transition: transform 1.25s ease-in;
+  transition: transform 1.25s ease-in, -webkit-transform 1.25s ease-in;
+}
+
+h1 {
+  position: relative;
+  color: black;
+  background-color: rgb(108, 221, 231);
+  margin: 0px;
+}
+
+#menu #list {
+  width: 300px;
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  background: #d5d5d5;
+}
+
+#menu:hover #list {
+  max-height: 500px;
+  -webkit-transition: 1.25s;
+  transition: 1.25s;
+  background-color: rgb(108, 221, 231);
+}
+
+#menu:hover img {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 2px;
+}
+
+.box {
+  width: 300px;
+  border: 1px solid black;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.box:has(h4:hover) {
+  background: red;
+}

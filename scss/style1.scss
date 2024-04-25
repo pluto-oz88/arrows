@@ -1,0 +1,92 @@
+@import url("../css/initialize.css");
+
+.gmenu {
+  position: relative;
+  display: block;
+  background-color: #a0c2c9;
+  color: #f9f9f9;
+  font-size: 2em;
+  transition: 10s;
+  &:hover .gsubmenu .subline1,
+  &:hover .gsubmenu {
+    display: flex;
+    height: 200px;
+    transition: all 5s;
+  }
+  .arrow {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: 2px;
+    margin-left: 20px;
+    transition: transform 0.5s;
+  }
+  &:hover .arrow {
+    transform: rotate(90deg);
+  }
+  &:hover h3 {
+    color: aqua;
+  }
+}
+
+h3 {
+  display: inline;
+  position: relative;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.gsubmenu {
+  position: static;
+  //display: none;
+  flex-flow: column nowrap;
+  background-color: rgb(64, 68, 37);
+  height: 0px;
+  transition: all 10s;
+}
+
+.subline1 {
+  position: static;
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 1.5em;
+  background-color: rgb(64, 68, 37);
+  height: 0px;
+  transition: all 10s;
+}
+
+#menu #list {
+  max-height: 0;
+  transition: max-height 4.25s ease-out;
+  overflow: hidden;
+  background: #d5d5d5;
+}
+
+#menu:hover #list {
+  max-height: 500px;
+  //transition: max-height 4.25s ease-in;
+}
+
+nav {
+  max-width: 50%;
+  display: flex;
+  gap: 0.5rem;
+}
+
+nav a {
+  flex: 1;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #fff;
+  color: #333;
+}

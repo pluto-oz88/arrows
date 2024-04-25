@@ -1,0 +1,69 @@
+@import url("../css/initialize.css");
+
+.topline {
+  width: 300px;
+}
+
+.arrow {
+  height: 40px;
+  width: auto;
+  position: absolute;
+  top: 2px;
+  left: 250px;
+
+  &:hover .arrow {
+    transform: rotate(90deg);
+    transition: transform 1.25s ease-in;
+  }
+}
+
+h1 {
+  position: relative;
+  color: black;
+  background-color: rgb(108, 221, 231);
+  margin: 0px;
+  //border-radius: 10px;
+}
+
+#menu #list {
+  width: 300px;
+  position: relative;
+  max-height: 0;
+  //transition: max-height 1.25s ease-out;
+  overflow: hidden;
+  background: #d5d5d5;
+}
+
+#menu:hover #list {
+  max-height: 500px;
+  //   transition: max-height 1.25s linear, background-color 1.25s ease-in;
+  transition: 1.25s;
+  background-color: rgb(108, 221, 231);
+}
+
+#menu:hover img {
+  transform: rotate(90deg);
+  transition: transform 1s;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 2px;
+}
+
+.box {
+  width: 300px;
+  border: 1px solid black;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.box:has(h4:hover) {
+  background: red;
+}
